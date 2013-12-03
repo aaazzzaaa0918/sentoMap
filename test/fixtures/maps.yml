@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  'no': 1
+  ku: MyString
+  namae: MyString
+  jusho: MyString
+  tel: MyString
+  eigyo: MyString
+  kyujitu: MyString
+  ido: 1.5
+  keido: 1.5
+
+two:
+  'no': 1
+  ku: MyString
+  namae: MyString
+  jusho: MyString
+  tel: MyString
+  eigyo: MyString
+  kyujitu: MyString
+  ido: 1.5
+  keido: 1.5

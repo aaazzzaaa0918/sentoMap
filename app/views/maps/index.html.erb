@@ -1,0 +1,6 @@
+<p>
+	<% @mapData.each do |data|%>
+		<li><%= data.no %> | <%= data.ku %> | <%= data.namae %> | <%= data.jusho %></li>
+		<li><%= link_to data.no, maps_show_path(data.no) %></li>
+	<% end %>
+</p>
