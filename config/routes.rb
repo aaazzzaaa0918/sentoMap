@@ -1,7 +1,7 @@
 SentoMap::Application.routes.draw do
   # get "maps/index"
 
-  root :to => 'maps#index'
+  root 'maps#index'
 
   get 'maps/show(/:id)' => 'maps#show', as: 'maps_show'
 
