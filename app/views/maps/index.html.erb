@@ -1,6 +1,9 @@
-<p>
-	<% @mapData.each do |data|%>
-		<li><%= data.no %> | <%= data.ku %> | <%= data.namae %> | <%= data.jusho %></li>
-		<li><%= link_to data.no, maps_show_path(data.no) %></li>
-	<% end %>
-</p>
+<p>銭湯一覧リスト</p>
+<% @mapData.each do |data|%>
+	<li class="sentoData">
+		<div>【No.】<%= data.no.to_s %></div>
+		<div>【区】<%= data.ku %></div>
+		<div>【名前】<%= data.namae %></div>
+		<div>【住所】<%= link_to data.jusho, maps_show_path(data.no) %></div>
+	</li>
+<% end %>

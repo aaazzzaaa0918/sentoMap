@@ -1,4 +1,12 @@
-<p>show</p>
-<p><%= @mapDetail.no %> | <%= @mapDetail.ku %> | <%= @mapDetail.namae %> | <%= @mapDetail.jusho %></p>
+<p>銭湯詳細データ</p>
+<li class="sentoDataDetail">
+	<div>【No.】<%= @mapDetail.no.to_s %></div>
+	<div>【区】<%= @mapDetail.ku %></div>
+	<div>【名前】<%= @mapDetail.namae %></div>
+	<div>【住所】<%= @mapDetail.jusho%></div>
+	<div>【電話番号】<%= @mapDetail.tel%></div>
+	<div>【営業時間】<%= @mapDetail.eigyo%></div>
+	<div>【休日】<%= @mapDetail.kyujitu%></div>
+</li>
 
 <%= link_to "back", root_path %>
