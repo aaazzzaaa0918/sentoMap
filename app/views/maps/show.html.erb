@@ -3,10 +3,14 @@
 	<div>【No.】<%= @mapDetail.no.to_s %></div>
 	<div>【区】<%= @mapDetail.ku %></div>
 	<div>【名前】<%= @mapDetail.namae %></div>
-	<div>【住所】<%= @mapDetail.jusho%></div>
-	<div>【電話番号】<%= @mapDetail.tel%></div>
-	<div>【営業時間】<%= @mapDetail.eigyo%></div>
-	<div>【休日】<%= @mapDetail.kyujitu%></div>
+	<div>【住所】<%= @mapDetail.jusho %></div>
+	<div>【電話番号】<%= @mapDetail.tel %></div>
+	<div>【営業時間】<%= @mapDetail.eigyo %></div>
+	<div>【休日】<%= @mapDetail.kyujitu %></div>
+	<div id="ido" style="display:none;"><%= @mapDetail.ido %></div>
+	<div id="keido" style="display:none;"><%= @mapDetail.keido %></div>
 </li>
 
 <%= link_to "back", root_path %>
+
+<%= javascript_include_tag 'show' %>
