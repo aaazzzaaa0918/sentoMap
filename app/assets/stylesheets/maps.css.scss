@@ -3,6 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .sentoData {
+	width: 250px;
+	height: 68px;
 	padding: 10px 0;
-	border-bottom: 1px solid #eee;
+	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
+	margin: 2px 2px;
+	border: 1px solid #EEE;
+	float: left;
+	font-size: 12px;
+}
+
+a { 
+	&:link, &:visited {
+		color: #000;
+	}
+	&:hover {
+		color: #007AFF;
+	}
+	&:active {
+		color: #00C2FF;
+	}
 }

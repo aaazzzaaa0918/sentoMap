@@ -1,3 +1,30 @@
 $(function() {
-	console.log($('#keido').text());
+	var idoF = $('#ido').text(), keidoF = $('#keido').text();
+
+	// (1) Google Mapで利用する初期設定用の変数
+	var latlng = new google.maps.LatLng(idoF, keidoF);
+	var opts = {
+		zoom: 18,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		center: latlng
+	};
+
+	// (2) Mapオブジェクトの生成
+	// getElementById("map")の"map"は、body内の<div id="map">より
+	map = new google.maps.Map(document.getElementById("map"), opts);
+
+	// Markerの初期設定
+	var markerOpts = {
+		position: new google.maps.LatLng(idoF, keidoF),
+		map: map,
+		title: $('#name').text()
+	};
+	// 直前で作成したMarkerOptionsを利用してMarkerを作成
+	var marker = new google.maps.Marker(markerOpts);
+
+	infowindow = new google.maps.InfoWindow({
+		content: $('#name').text() + '：' + $('#address').text(),
+		position: latlng
+	});
+	infowindow.open(map);
 })
