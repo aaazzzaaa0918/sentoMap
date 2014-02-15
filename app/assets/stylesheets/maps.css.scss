@@ -2,25 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.sentoData {
-	width: 250px;
-	height: 68px;
-	padding: 10px 0;
-	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-	margin: 2px 2px;
-	border: 1px solid #EEE;
-	float: left;
-	font-size: 12px;
+// .sentoData {
+// 	width: 250px;
+// 	height: 68px;
+// 	padding: 10px 0;
+// 	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
+// 	margin: 2px 2px;
+// 	border: 1px solid #EEE;
+// 	float: left;
+// 	font-size: 12px;
+// }
+
+// a { 
+// 	&:link, &:visited {
+// 		color: #000;
+// 	}
+// 	&:hover {
+// 		color: #007AFF;
+// 	}
+// 	&:active {
+// 		color: #00C2FF;
+// 	}
+// }
+
+#pageTitle {
+background-color: #eee;
+text-align: center;
+margin: 10px 0;
 }
 
-a { 
-	&:link, &:visited {
-		color: #000;
-	}
-	&:hover {
-		color: #007AFF;
-	}
-	&:active {
-		color: #00C2FF;
-	}
+.nameWrapper {
+	display: none;
 }
+.ward {
+	background-color: #90DD49;
+	border-bottom: 1px solid #eee;
+}
+.sentoId {
+	display: none;
+}
+
+.name {
+border-bottom: 1px solid #eee;
+}
+

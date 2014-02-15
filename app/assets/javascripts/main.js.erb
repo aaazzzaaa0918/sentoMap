@@ -1,0 +1,63 @@
+$(function() {
+
+	// 重複のない区を取り出す
+	function pickUpKu(objArray, propName){
+	  var storage = {};
+	  var uniqueObjArray = [];
+	  var i, value;
+	 
+	  for (i = 0; i < objArray.length; i++) {
+	    value = objArray[i][propName];
+	    if (!(value in storage)) {
+	      storage[value] = true;
+	      uniqueObjArray.push(objArray[i][propName]);
+	    }
+	  }
+	  return uniqueObjArray;
+	}
+	var arrKu = pickUpKu(mapData,'ku');
+
+	// 区の件数をカウントする
+	var kuJson = {};
+	for (var i = 0 ; i <= arrKu.length; i++) {
+		var count = 0;
+
+		$.each(mapData,function(j) {
+	  	if (mapData[j].ku == arrKu[i]) {
+	  		count++;
+	  		kuJson[arrKu[i]] = count;
+	  	}
+	  });
+	};
+
+	// HTMLのソースを作成する
+	var src = '';
+
+	for ( kuName in kuJson ){
+    src += '<div class="area"><div class="ward">';
+    src += kuName + '（' + kuJson[kuName] + '）|<span class="accordion">＋</span>|</div><ul class="nameWrapper">';
+
+    $.each(mapData, function(i) {
+    	if (mapData[i].ku == kuName) {
+    		src += '<li class="name"><a href="/maps/show/';
+    		src += mapData[i].no + '">' + mapData[i].no + '．' + mapData[i].namae + ' ＜' + mapData[i].jusho + '＞</a></li>';
+    	};
+    });
+    src += '</ul></div>';
+	}
+	$('.areaBase').append(src);
+
+
+	function switchDiv() {
+		$(".ward").on("click", function(e) {
+	    $(this).next().slideToggle(100,function(ev){
+	    	if ($(this).is(':visible')) {
+	    		$(e.currentTarget.firstElementChild).text('ー');
+	    	} else {
+	    		$(e.currentTarget.firstElementChild).text('＋');
+	    	}
+	    });	    
+	  });
+	}
+	switchDiv();
+})

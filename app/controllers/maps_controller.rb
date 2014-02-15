@@ -4,10 +4,6 @@ class MapsController < ApplicationController
   def index
   	@pageTitle = '銭湯マップ | リスト'
   	@mapData = Map.all
-  	# @ddd
-  	@mapData.each do |data|
-  		@ddd = data.ku.to_s
-  	end
   end
 
   def show
