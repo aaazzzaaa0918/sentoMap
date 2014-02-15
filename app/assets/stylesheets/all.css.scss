@@ -1,0 +1,17 @@
+// 付与するベンダープレフィックス
+$set_prefix: -webkit-, -moz-, -ms-, -o-, '';
+ 
+// border-radius
+@mixin border_radius($br_value: 3px) {
+	@each $prefix in $set_prefix {
+		#{$prefix}border-radius: $br_value;
+	}
+}
+
+#header {
+	background: #0368FF;
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+	@include border-radius(10px);
+}

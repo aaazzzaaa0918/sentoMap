@@ -1,9 +1,11 @@
 SentoMap::Application.routes.draw do
-  # get "maps/index"
+  get "maps/index"
 
   root 'maps#index'
 
   get 'maps/show(/:id)' => 'maps#show', as: 'maps_show'
+
+  get "maps/data"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

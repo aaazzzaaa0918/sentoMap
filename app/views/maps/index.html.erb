@@ -1,5 +1,10 @@
-<p>銭湯一覧リスト</p>
+<div>銭湯一覧リスト</div>
+<%= @ddd %>
 <% @mapData.each do |data|%>
 	<% htmlStr = '<li class="sentoData"><div>【No.】' + data.no.to_s + '</div><div>【区】' + data.ku + '</div><div>【名前】' + data.namae + '</div><div>【住所】' + data.jusho + '</div></li>' %>
 	<%= link_to htmlStr.html_safe, maps_show_path(data.no) %>
 <% end %>
+
+
+
+<%= javascript_include_tag 'main' %>
