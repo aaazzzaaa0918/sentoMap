@@ -2,7 +2,7 @@
 
 class MapsController < ApplicationController
   def index
-  	@pageTitle = '銭湯マップ | リスト'
+  	@pageTitle = '銭湯マップ東京'
   	@mapData = Map.all
   end
 
