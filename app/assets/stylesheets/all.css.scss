@@ -1,14 +1,3 @@
-// 付与するベンダープレフィックス
-$set_prefix: -webkit-, -moz-, -ms-, -o-, '';
- 
-// border-radius
-@mixin border_radius($br_value: 3px) {
-	@each $prefix in $set_prefix {
-		#{$prefix}border-radius: $br_value;
-	}
-}
-
-
 * {
     word-break: break-all;
     -webkit-touch-callout:none;
