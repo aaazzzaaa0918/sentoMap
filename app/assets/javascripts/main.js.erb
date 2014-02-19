@@ -34,13 +34,13 @@ $(function() {
 	var src = '';
 
 	for ( kuName in kuJson ){
-    src += '<div class="area"><div class="ward">';
-    src += kuName + '（' + kuJson[kuName] + '）|<span class="accordion">＋</span>|</div><ul class="nameWrapper">';
+    src += '<div class="area"><div class="ward"><span class="accordion">＋</span>';
+    src += kuName + '<span class="counter">' + kuJson[kuName] + '</span></div><ul class="nameWrapper">';
 
     $.each(mapData, function(i) {
     	if (mapData[i].ku == kuName) {
     		src += '<li class="name"><a href="/maps/show/';
-    		src += mapData[i].no + '">' + mapData[i].no + '．' + mapData[i].namae + ' ＜' + mapData[i].jusho + '＞</a></li>';
+    		src += mapData[i].no + '"><div class="sentoName">[' + mapData[i].no + '] ' + mapData[i].namae + '</div><div class="jusho">' + mapData[i].jusho + '</div></a></li>';
     	};
     });
     src += '</ul></div>';
@@ -50,7 +50,7 @@ $(function() {
 
 	function switchDiv() {
 		$(".ward").on("click", function(e) {
-	    $(this).next().slideToggle(100,function(ev){
+	    $(this).next().slideToggle(150,function(ev){
 	    	if ($(this).is(':visible')) {
 	    		$(e.currentTarget.firstElementChild).text('ー');
 	    	} else {

@@ -1,48 +1,91 @@
-// Place all the styles related to the Maps controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-// .sentoData {
-// 	width: 250px;
-// 	height: 68px;
-// 	padding: 10px 0;
-// 	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-// 	margin: 2px 2px;
-// 	border: 1px solid #EEE;
-// 	float: left;
-// 	font-size: 12px;
-// }
-
-// a { 
-// 	&:link, &:visited {
-// 		color: #000;
-// 	}
-// 	&:hover {
-// 		color: #007AFF;
-// 	}
-// 	&:active {
-// 		color: #00C2FF;
-// 	}
-// }
-
 #pageTitle {
-background-color: #eee;
-text-align: center;
-margin: 10px 0;
+  background-color: #eee;
+  text-align: center;
+  margin: 10px 0; 
 }
 
 .nameWrapper {
-	display: none;
+  display: none; 
 }
+
 .ward {
-	background-color: #90DD49;
-	border-bottom: 1px solid #eee;
+  background-color: #95a5a6;
+  border-bottom: 1px solid #C0C0C0;
+  font-size: 13px;
+  line-height: 35px;
+  color: #fff;
+  padding-left: 8px;
+  position: relative; 
 }
+
+.nameWrapper {
+  padding-left: 11px;
+  line-height: 32px; 
+}
+
+.counter {
+  background-color: #7f8c8d;
+  width: 30px;
+  display: inline-block;
+  height: 17px;
+  line-height: 19px;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 36px;
+  position: absolute;
+  top: 8px;
+  right: 12px; 
+}
+
 .sentoId {
-	display: none;
+  display: none; 
+}
+
+.accordion {
+  width: 16px;
+  height: 16px;
+  background: #ecf0f1;
+  display: inline-block;
+  line-height: 17px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  color: #7f8c8d; 
+}
+
+.selected {
+  background-color: #7f8c8d; 
 }
 
 .name {
-border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 7px 0 6px 5px;
+	position: relative;
+
+	a:link, a:visited {
+		color: #666;
+		text-decoration: none;
+	}
+
+	&:after {
+		content: "";
+		width: 10px;
+		height: 15px;
+		position: absolute;
+		top: 17px;
+		right: 7px;
+		background: url("arrow.png") no-repeat;
+		background-size: 100%;
+	}
 }
 
+.sentoName {
+font-size: 13px;
+line-height: 25px;
+}
+
+.jusho {
+font-size: 9px;
+line-height: 15px;
+margin-top: -4px;
+}
