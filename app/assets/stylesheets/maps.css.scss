@@ -1,9 +1,3 @@
-#pageTitle {
-  background-color: #eee;
-  text-align: center;
-  margin: 10px 0; 
-}
-
 .nameWrapper {
   display: none; 
 }
@@ -15,7 +9,8 @@
   line-height: 35px;
   color: #fff;
   padding-left: 8px;
-  position: relative; 
+  position: relative;
+  font-weight: bold;
 }
 
 .nameWrapper {
@@ -72,7 +67,7 @@
 		width: 10px;
 		height: 15px;
 		position: absolute;
-		top: 17px;
+		top: 20px;
 		right: 7px;
 		background: url("arrow.png") no-repeat;
 		background-size: 100%;
@@ -80,12 +75,12 @@
 }
 
 .sentoName {
-font-size: 13px;
+font-size: 14px;
 line-height: 25px;
 }
 
 .jusho {
-font-size: 9px;
+font-size: 12px;
 line-height: 15px;
-margin-top: -4px;
+margin-top: 0px;
 }
