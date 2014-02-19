@@ -1,15 +1,22 @@
 .sentoDataDetail {
-	padding: 10px 0;
-	margin-bottom: 10px;
+	padding: 41px 0 10px;
+	margin: 10px auto 10px;
 	border-bottom: 1px solid #eee;
 }
 
- #map {
- 	margin: 15px 0;
- 	height: 300px;
- 	width: 300px;
- }
+#map {
+	margin: 15px 0;
+	height: 300px;
+	width: 300px;
+}
 
- .back {
- 	padding: 20px 0;
- }
+.back {
+position: fixed;
+z-index: 2;
+top: 12px;
+left: 12px;
+width: 10px;
+height: 15px;
+background: url("arrowWhite.png") no-repeat;
+background-size: 100%;
+}
