@@ -32,6 +32,7 @@ $(function() {
 		infowindow.open(map);
 	});
 
+	// 距離の計算
 	navigator.geolocation.getCurrentPosition(is_success,is_error);
 
 	var kyoriElm = $('.dataText.kyori');
@@ -60,7 +61,6 @@ $(function() {
 				infowindowCurrent.open(map);
 			});
   }
-  
   function is_error(error) {
       switch(error.code) {
         case 1:
