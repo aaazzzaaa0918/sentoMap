@@ -38,7 +38,27 @@ $(function() {
   function is_success(position) {
       var currentLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       var distance = google.maps.geometry.spherical.computeDistanceBetween(latlng, currentLatLng);
-			kyoriElm.text('現在地から約' + Math.round(distance) + 'm');
+      var kmDist = (Math.round(distance/10))/100;
+			kyoriElm.text('現在地から約 ' + kmDist + ' km');
+
+			// 現在値をマーカーでセット
+			var markerOptsCurrent = {
+				position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+				map: map,
+				animation: google.maps.Animation.DROP,
+				title: '現在地'
+			};
+			// 直前で作成したMarkerOptionsを利用してMarkerを作成
+			var markerCurrent = new google.maps.Marker(markerOptsCurrent);
+
+			var infowindowCurrent = new google.maps.InfoWindow({
+				content: '現在地',
+				position: currentLatLng
+			});
+
+			google.maps.event.addListener(markerCurrent, 'click', function() {
+				infowindowCurrent.open(map);
+			});
   }
   
   function is_error(error) {
