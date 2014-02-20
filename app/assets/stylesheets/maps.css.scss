@@ -1,7 +1,8 @@
 @import "helper";
 
 .areaBase {
-padding-top: 41px;
+margin-top: 40px;
+border-top: 1px solid #C0C0C0;
 }
 
 .nameWrapper {
@@ -13,7 +14,7 @@ width: 24px;
 height: 13px;
 background: #B9B9B9;
 font-size: 8px;
-line-height: 15px;
+line-height: 14px;
 color: #fff;
 text-align: center;
 margin: 0px 4px 0 0;
