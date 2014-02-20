@@ -1,17 +1,44 @@
-<li class="sentoDataDetail">
-	<div>【No.】<%= @mapDetail.no.to_s %></div>
-	<div>【区】<%= @mapDetail.ku %></div>
-	<div>【名前】<span id="name"><%= @mapDetail.namae %></span></div>
-	<div>【住所】<span id="address"><%= @mapDetail.jusho %></span></div>
-	<div>【電話番号】<%= @mapDetail.tel %></div>
-	<div>【営業時間】<%= @mapDetail.eigyo %></div>
-	<div>【休日】<%= @mapDetail.kyujitu %></div>
-	<div id="ido" style="display:none;"><%= @mapDetail.ido %></div>
-	<div id="keido" style="display:none;"><%= @mapDetail.keido %></div>
-</li>
+<div id="show">
 
 <div id="map"></div>
 
+<ul class="sentoDataDetail">
+	<li class="dataLi">
+		<div class="dataTitle kyori">距離</div>
+		<div class="dataText kyori"><%= image_tag 'ajax-loader.gif' %>現在地を取得中…</div>
+	</li>
+	<li class="dataLi">
+		<div class="dataTitle ku">区</div>
+		<div class="dataText ku"><%= @mapDetail.ku %></div>
+	</li>
+	<li class="dataLi">
+		<div class="dataTitle namae">名前</div>
+		<div class="dataText namae"><%= @mapDetail.namae %></div>
+	</li>
+	<li class="dataLi">
+		<div class="dataTitle jusho">住所</div>
+		<div class="dataText jusho"><%= @mapDetail.jusho %></div>
+	</li>
+	<li class="dataLi">
+		<div class="dataTitle tel">電話番号</div>
+		<div class="dataText tel"><%= @mapDetail.tel %></div>
+	</li>
+	<li class="dataLi">
+		<div class="dataTitle eigyo">営業時間</div>
+		<div class="dataText eigyo"><%= @mapDetail.eigyo %></div>
+	</li>
+	<li class="dataLi">
+		<div class="dataTitle kyujitu">休日</div>
+		<div class="dataText kyujitu"><%= @mapDetail.kyujitu %></div>
+	</li>
+	<li id="ido" style="display:none;"><%= @mapDetail.ido %></li>
+	<li id="keido" style="display:none;"><%= @mapDetail.keido %></li>
+</ul>
+
 <%= link_to "", root_path, class: 'back' %>
+
+</div>
+
+
 
 <%= javascript_include_tag 'show' %>

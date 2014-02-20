@@ -4,7 +4,7 @@ $(function() {
 	// (1) Google Mapで利用する初期設定用の変数
 	var latlng = new google.maps.LatLng(idoF, keidoF);
 	var opts = {
-		zoom: 18,
+		zoom: 15,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		center: latlng
 	};
@@ -17,14 +17,41 @@ $(function() {
 	var markerOpts = {
 		position: new google.maps.LatLng(idoF, keidoF),
 		map: map,
+		animation: google.maps.Animation.DROP,
 		title: $('#name').text()
 	};
 	// 直前で作成したMarkerOptionsを利用してMarkerを作成
 	var marker = new google.maps.Marker(markerOpts);
 
-	infowindow = new google.maps.InfoWindow({
-		content: $('#name').text() + '：' + $('#address').text(),
+	var infowindow = new google.maps.InfoWindow({
+		content: $('#name').text(),
 		position: latlng
 	});
-	infowindow.open(map);
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.open(map);
+	});
+
+	navigator.geolocation.getCurrentPosition(is_success,is_error);
+
+	var kyoriElm = $('.dataText.kyori');
+  function is_success(position) {
+      var currentLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      var distance = google.maps.geometry.spherical.computeDistanceBetween(latlng, currentLatLng);
+			kyoriElm.text('現在地から約' + Math.round(distance) + 'm');
+  }
+  
+  function is_error(error) {
+      switch(error.code) {
+        case 1:
+	        kyoriElm.text('位置情報の取得が許可されていません');
+        break;
+        case 2:
+        	kyoriElm.text('位置情報の取得に失敗しました');
+        break;
+        case 3:
+        	kyoriElm.text('位置情報取得の処理がタイムアウトしました');
+        break;
+    }
+  }	
 })
