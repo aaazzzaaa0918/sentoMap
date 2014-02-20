@@ -40,7 +40,7 @@ $(function() {
     $.each(mapData, function(i) {
     	if (mapData[i].ku == kuName) {
     		src += '<li class="name"><a href="/maps/show/';
-    		src += mapData[i].no + '"><div class="sentoName"><span class="sentoNo">' + mapData[i].no + '</span>' + mapData[i].namae + '</div><div class="jusho">' + mapData[i].jusho + '</div></a></li>';
+    		src += mapData[i].no + '"><div class="sentoNo">' + mapData[i].no + '</div><div class="sentoName">' + mapData[i].namae + '</div><div class="jusho">' + mapData[i].jusho + '</div></a></li>';
     	};
     });
     src += '</ul></div>';
