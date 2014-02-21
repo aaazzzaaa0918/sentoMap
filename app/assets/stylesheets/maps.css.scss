@@ -1,8 +1,10 @@
 @import "helper";
 
 #index {
-  margin-top: 40px;
   border-top: 1px solid #C0C0C0;
+  position: absolute;
+  width: 100%;
+  top: 40px;
 
   .nameWrapper {
     display: none; 

@@ -2,15 +2,16 @@
 
 #show {
 	.sentoDataDetail {
-	margin: 10px auto 10px;
+	margin: 10px auto 30px;
 	width: 300px;
 	font-size: 14px;
 	}
 
 	#map {
 		margin: 50px auto 10px;
-		height: 200px;
+		height: 250px;
 		width: 300px;
+		border: 1px solid #DBDBDB;
 	}
 
 	.back {
@@ -47,10 +48,24 @@
 	border-bottom: 1px solid #eee;
 	}
 
-	.kyori img {
+	.kyori img, .routeBtn img {
 		width: 12px;
 		height: 12px;
 		display: inline-block;
 		margin: 0px 5px 0 0;
+	}
+
+	.routeBtn {
+		@include border-radius(4px);
+		width: 100%;
+		background-color: #ccc;
+		margin: 18px auto 0;
+		text-align: center;
+		line-height: 34px;
+		height: 34px;
+		color: #FFF;
+		font-weight: bold;
+		box-shadow: 0px 1px 0px #285069;
+		font-size: 13px;
 	}
 }

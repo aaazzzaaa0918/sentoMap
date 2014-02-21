@@ -32,9 +32,9 @@ $(function() {
 
 	// HTMLのソースを作成する
 	var src = '';
-
+	
 	for ( kuName in kuJson ){
-    src += '<div class="area"><div class="ward"><span class="accordion">＋</span>';
+    src += '<div class="area"><div id="' + encodeURIComponent(kuName) + '" class="ward"><span class="accordion">＋</span>';
     src += kuName + '<span class="counter">' + kuJson[kuName] + '</span></div><ul class="nameWrapper">';
 
     $.each(mapData, function(i) {

@@ -4,16 +4,12 @@
 
 <ul class="sentoDataDetail">
 	<li class="dataLi">
-		<div class="dataTitle kyori">距離</div>
-		<div class="dataText kyori"><%= image_tag 'ajax-loader.gif' %>現在地を取得中…</div>
-	</li>
-	<li class="dataLi">
-		<div class="dataTitle ku">区</div>
-		<div class="dataText ku"><%= @mapDetail.ku %></div>
-	</li>
-	<li class="dataLi">
 		<div class="dataTitle namae">名前</div>
 		<div class="dataText namae"><%= @mapDetail.namae %></div>
+	</li>
+	<li class="dataLi">
+		<div class="dataTitle kyori">距離</div>
+		<div class="dataText kyori"><%= image_tag 'ajax-loader.gif' %>現在地を取得中…</div>
 	</li>
 	<li class="dataLi">
 		<div class="dataTitle jusho">住所</div>
@@ -33,9 +29,12 @@
 	</li>
 	<li id="ido" style="display:none;"><%= @mapDetail.ido %></li>
 	<li id="keido" style="display:none;"><%= @mapDetail.keido %></li>
+	<li class="route">
+		<div class="routeBtn"><%= image_tag 'ajax-loader.gif' %>現在地を取得中…</div>
+	</li>
 </ul>
 
-<%= link_to "", root_path, class: 'back' %>
+<%= link_to "", 'javascript:history.back();', class: 'back' %>
 
 </div>
 
